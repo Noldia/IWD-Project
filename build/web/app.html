@@ -1,9 +1,13 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>App</title>
+        <link rel="icon" href="assets/computer-investment.svg">
+        <title>Project Name</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!--iconos fontawesome-->
+        <script src="https://kit.fontawesome.com/3e9cb3f872.js" crossorigin="anonymous"></script>
         
         <!--css bootstrap personalizado-->
         <link rel="stylesheet" href="css/bootstrap.css">
@@ -28,7 +32,7 @@
                                 <a class="nav-link" href="index.html">Inicio</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Herramienta</a>
+                                <a class="nav-link" href="app.html">App</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link disabled">Disabled</a>
@@ -45,32 +49,148 @@
           <!--app-->
           <section id="app">
               <div class="container">
-                  <h2>App</h2>
-                  <small>Selecciona tus preferencias</small> 
-                  <div class="form-check">
-                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                      <label class="form-check-label" for="flexRadioDefault1">
-                          Video Juegos
-                      </label>
-                  </div>
-                  <div class="form-check">
-                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
-                      <label class="form-check-label" for="flexRadioDefault2">
-                          Streaming
-                      </label>
-                  </div>
-                  <div class="form-check">
-                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
-                      <label class="form-check-label" for="flexRadioDefault2">
-                          Edicion de Video
-                      </label>
-                  </div>
-                  <div class="form-check">
-                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
-                      <label class="form-check-label" for="flexRadioDefault2">
-                          Ofimatica
-                      </label>
-                  </div>
+                  <form action="results.jsp" class="form">
+                    <div class="row">
+                        <div class="col-lg-12 mb-2 mt-2" align="center">
+                          <h2>App</h2>
+                          <i class="fa-solid fa-computer"></i>
+                          <small>Selecciona tus preferencias</small>                       
+                        </div>
+                        <div class="col-lg-3 col-md-6 mb-2 mt-2">
+                          <span>Tipo de uso:</span>
+                          <div class="form-check mt-2">
+                              <input class="form-check-input" type="radio" name="tipoUso1" id="tipoUso">
+                              <label class="form-check-label" for="tipoUso1">
+                                  Video Juegos  <i class="fa-solid fa-gamepad"></i>
+                              </label>
+                          </div>
+                          <div class="form-check">
+                              <input class="form-check-input" type="radio" name="tipoUso1" id="tipoUso">
+                              <label class="form-check-label" for="tipoUso2">
+                                  Streaming   <i class="fa-solid fa-headset"></i>
+                              </label>
+                          </div>
+                          <div class="form-check">
+                              <input class="form-check-input" type="radio" name="tipoUso1" id="tipoUso">
+                              <label class="form-check-label" for="tipoUso3">
+                                  Edicion de Video   <i class="fa-solid fa-photo-film"></i>
+                              </label>
+                          </div>
+                          <div class="form-check">
+                              <input class="form-check-input" type="radio" name="tipoUso1" id="tipoUso">
+                              <label class="form-check-label" for="tipoUso4">
+                                  Ofimatica   <i class="fa-solid fa-briefcase"></i>
+                              </label>
+                          </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 mb-2 mt-2">
+                          <span>Gama del Producto:</span>
+                          <div class="form-check mt-2">
+                              <input class="form-check-input" type="radio" name="gama1" id="gama1">
+                              <label class="form-check-label" for="gama1">
+                                  Gama Baja   <i class="fa-solid fa-piggy-bank"></i>
+                              </label>
+                          </div>
+                          <div class="form-check">
+                              <input class="form-check-input" type="radio" name="gama1" id="gama1">
+                              <label class="form-check-label" for="gama2">
+                                  Gama Media   <i class="fa-solid fa-wallet"></i>
+                              </label>
+                          </div>
+                          <div class="form-check">
+                              <input class="form-check-input" type="radio" name="gama1" id="gama1">
+                              <label class="form-check-label" for="gama3">
+                                  Gama Alta   <i class="fa-solid fa-sack-dollar"></i>
+                              </label>
+                          </div>
+                          <div class="form-check">
+                              <input class="form-check-input" type="radio" name="gama1" id="gama1">
+                              <label class="form-check-label" for="gama4">
+                                  Todo   <i class="fa-solid fa-credit-card"></i>
+                              </label>
+                          </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 mb-2 mt-2">
+                          <span>Tamaño del PC:</span>
+                          <div class="form-check mt-2">
+                              <input class="form-check-input" type="radio" name="tamano1" id="tamano1">
+                              <label class="form-check-label" for="tamano1">
+                                  Mini (ITX)
+                              </label>
+                          </div>
+                          <div class="form-check">
+                              <input class="form-check-input" type="radio" name="tamano1" id="tamano1">
+                              <label class="form-check-label" for="tamano2">
+                                  Pequeño(micro ATX)
+                              </label>
+                          </div>
+                          <div class="form-check">
+                              <input class="form-check-input" type="radio" name="tamano1" id="tamano1">
+                              <label class="form-check-label" for="tamano3">
+                                  Estandar (ATX)
+                              </label>
+                          </div>
+                          <div class="form-check">
+                              <input class="form-check-input" type="radio" name="tamano1" id="tamano1">
+                              <label class="form-check-label" for="tamano4">
+                                  Gigante (ATX y EATX)
+                              </label>
+                          </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 mb-2 mt-2">
+                          <span>Diseño del PC:</span>
+                          <div class="form-check mt-2">
+                              <input class="form-check-input" type="radio" name="diseno1" id="diseno1">
+                              <label class="form-check-label" for="diseno1">
+                                  Basico
+                              </label>
+                          </div>
+                          <div class="form-check">
+                              <input class="form-check-input" type="radio" name="diseno1" id="diseno1">
+                              <label class="form-check-label" for="diseno2">
+                                  RGB
+                              </label>
+                          </div>
+                          <div class="form-check">
+                              <input class="form-check-input" type="radio" name="diseno1" id="diseno1">
+                              <label class="form-check-label" for="diseno3">
+                                  Minimalista
+                              </label>
+                          </div>
+                          <div class="form-check">
+                              <input class="form-check-input" type="radio" name="diseno1" id="diseno1">
+                              <label class="form-check-label" for="diseno4">
+                                  De diseño
+                              </label>
+                          </div>
+                        </div>
+                        <div class="row offset-md-2 mt-4">
+                          <div class="col-lg-12 mb-4">
+                            <span>Extras:</span>  
+                          </div>
+                          <div class="col-lg-6 mb-2 mt-2">
+                            <div class="custom-control custom-switch">
+                                <input type="checkbox" class="custom-control-input" id="customSwitch1">
+                                <label class="custom-control-label" for="customSwitch1">Incluir Opciones de refrigeracion</label>
+                            </div>
+                          </div>
+                          <div class="col-lg-6 mb-2 mt-2 ">
+                            <div class="custom-control custom-switch">
+                                <input type="checkbox" class="custom-control-input" id="customSwitch2">
+                                <label class="custom-control-label" for="customSwitch2">Incluir Perifericos Recomendados</label>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row offset-md-4 mt-4 mb-4" >
+                          <div class="col-lg-6">
+                            <button type="submit" class="btn btn-primary">Procesar</button>  
+                          </div>
+                          <div class="col-lg-6">
+                            <button type="button" class="btn btn-outline-danger">Limpiar</button>  
+                          </div>
+                        </div>
+                    </div>
+                  </form>
               </div>
               
           </section>
@@ -86,7 +206,11 @@
                         <a href="#">Preguntas Frecuentes</a>
                     </div>
                     <div class="col-12 col-lg">
-                        <a href="#">Redes Sociales</a>
+                        <a href="#">Redes Sociales</a><br>
+                        <a href="#"><i class="fa-brands fa-twitter">   </i></a>
+                        <a href="#"><i class="fa-brands fa-instagram">   </i></a>
+                        <a href="#"><i class="fa-brands fa-facebook-f">   </i></a>
+                        <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
                     </div>
                     <div class="col-12 col-lg">
                         <a href="#">Contactanos</a>

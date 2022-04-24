@@ -46,10 +46,33 @@
 
 /*----------/Maint----------------*/
 
+/*----------App----------------*/
+
+form span {
+    font-weight: bold;
+}
+
+/*----------/App----------------*/
+
+/*--------seccion marcas--------------*/
+#marcas{
+    background-color: #52534c;
+    color: #fff;
+}
+
+#marcas img{
+    width: 110px;
+}
+
+/*--------/seccion marcas--------------*/
+
+
+
 /*----------footer----------------*/
 
 .footer {
-    background: #325D88;
+    background: linear-gradient(90deg, #325D88, #2c5379 25%, #27415b);
+    /*background: #325D88;*/
     border-color: #325D88; 
 }
 
