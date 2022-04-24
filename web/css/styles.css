@@ -1,0 +1,66 @@
+/* 
+    Created on : 23/04/2022, 11:39:02 PM
+    Author     : ivar29
+*/
+/*
+    my styles on css
+*/
+/*----------Header----------------*/
+/*----------/Header----------------*/
+
+/*----------Main----------------*/
+
+#main .carousel img{
+    max-height: 80vh;
+    object-fit: cover;
+    filter: grayscale(70%);
+}
+
+#carousel{
+    position: relative;
+}
+
+#carousel .overlay{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+}
+
+#carousel .overlay .container,
+#carousel .overlay .row{
+    height: 100%;
+}
+
+.btn-ncc {
+    background-color: #4b7bec;
+    color: #fff
+}
+
+.btn-ncc:hover {
+    background-color: #3867d6;
+}
+
+/*----------/Maint----------------*/
+
+/*----------footer----------------*/
+
+.footer {
+    background: #325D88;
+    border-color: #325D88; 
+}
+
+.footer a {
+    color: #fff;
+    text-decoration: None;
+}
+
+.footer a:hover {
+    color: #94abc1;
+    text-decoration: None;
+}
+
+/*----------/footer----------------*/
