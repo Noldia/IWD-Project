@@ -6,6 +6,15 @@
     my styles on css
 */
 /*----------Header----------------*/
+
+nav img {
+    width: 35px;
+}
+nav span {
+    /*font-weight: bold;*/
+    font-family: fantasy;
+    
+}
 /*----------/Header----------------*/
 
 /*----------Main----------------*/
