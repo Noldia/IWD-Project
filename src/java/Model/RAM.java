@@ -9,7 +9,7 @@ package Model;
  *
  * @author ivar29
  */
-public class RAM extends ComputerComponent{
+public class RAM{
     private String      str_cod;
     private String      str_RAM;
     private Integer     int_tipoUso;

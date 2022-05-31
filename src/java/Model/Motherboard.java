@@ -9,7 +9,7 @@ package Model;
  *
  * @author ivar29
  */
-public class Motherboard extends ComputerComponent{
+public class Motherboard{
     private String      str_cod;
     private String      str_motherboard;
     private Integer     int_gama;

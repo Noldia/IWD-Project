@@ -9,7 +9,7 @@ package Model;
  *
  * @author ivar29
  */
-public class Processor extends ComputerComponent{
+public class Processor{
     
     private String      str_cod;
     private String      str_processor;

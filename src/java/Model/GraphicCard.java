@@ -9,7 +9,7 @@ package Model;
  *
  * @author ivar29
  */
-public class GraphicCard extends ComputerComponent{
+public class GraphicCard{
     
     private String      str_cod;
     private String      str_graphicCard;

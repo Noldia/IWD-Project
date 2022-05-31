@@ -5,13 +5,23 @@
  */
 package Controller;
 
+import Model.ComputerComponent;
+import Utils.ConnectDB;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 /**
  *
@@ -33,6 +43,53 @@ public class ServletBudget extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         
+        String tipoUso = request.getParameter("tipoUso");
+        String gama = request.getParameter("gama");
+        String tamano = request.getParameter("tamano");
+        String diseno = request.getParameter("diseno");
+        
+        
+        
+        try {
+            int k=0;
+            PreparedStatement psta = ConnectDB.getConnect()
+                    .prepareStatement("select * from componentes where tipoUso=? and gama=? and tamano=? and diseno=?");
+            
+            psta.setString(k++, tipoUso);
+            psta.setString(k++, gama);
+            psta.setString(k++, tamano);
+            psta.setString(k++, diseno);
+            
+            ResultSet rs = psta.executeQuery();
+            
+            List<ComputerComponent> lista = new ArrayList<ComputerComponent>();
+            
+            if(rs.next()){
+                while(rs.next()){
+                        ComputerComponent component = new ComputerComponent(
+                                rs.getString(1),
+                                rs.getString(2),
+                                rs.getString(3),
+                                rs.getString(4),
+                                rs.getFloat(5),
+                                rs.getInt(6),
+                                rs.getInt(7),
+                                rs.getInt(8),
+                                rs.getInt(9)
+                        );
+                        lista.add(component);
+                    }
+                    
+                request.setAttribute("lista", lista);
+                request.getRequestDispatcher("results.jsp").forward(request, response);
+            }else{
+                request.getRequestDispatcher("app.jsp").forward(request, response);
+            }
+            
+            
+        } catch (SQLException ex) {
+            Logger.getLogger(ServletBudget.class.getName()).log(Level.SEVERE, null, ex);
+        }
         
         
     }

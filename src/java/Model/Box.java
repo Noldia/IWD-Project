@@ -9,7 +9,7 @@ package Model;
  *
  * @author ivar29
  */
-public class Box extends ComputerComponent{
+public class Box{
     
     private String      str_code;
     private String      str_box;

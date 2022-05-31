@@ -52,7 +52,7 @@
             <!--app-->
             <section id="app">
                 <div class="container">
-                    <form action="results.jsp" class="form">
+                    <form action="ServletBudget" class="form">
                         <div class="row">
                             <div class="col-lg-12 mb-2 mt-2" align="center">
                                 <h2>App</h2>
