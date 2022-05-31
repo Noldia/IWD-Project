@@ -32,7 +32,7 @@
                                 <a class="nav-link" href="#">Inicio</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="app.html">App</a>
+                                <a class="nav-link" href="app.jsp">App</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="#contacto">Contacto</a>
@@ -72,7 +72,7 @@
                                         sin la necesidad de contar con conocimientos de informatica o hardaware.
                                     </p>
                                     <a href="#" class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#modalTuto">Como funciona</a>
-                                    <a href="app.html" class="btn btn-ncc">Empezar</a>
+                                    <a href="app.jsp" class="btn btn-ncc">Empezar</a>
                                 </div>
                             </div>
                         </div>
@@ -197,16 +197,17 @@
                 </div>
                 <div class="row mt-4 offset-1">
                     <div class="col-10 mb-4">
-                        <form>
+                        <form action="succes.jsp" method="post">
                             <div class="form-group">
                                 <label for="exampleFormControlInput1">Direccion de Email:</label>
-                                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+                                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="nombre@ejemplo.com" name="emailTxt">
                             </div>
                             <div class="form-group">
                                 <label for="exampleFormControlTextarea1">Mensaje: </label>
-                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="contentTxt"></textarea>
                             </div>
-                            <button type="button" class="btn btn-primary btn-lg">Enviar</button>
+                            <input type="submit" class="btn btn-primary btn-lg" value="Enviar">
+                            <input type="reset" class="btn btn-danger btn-lg" value="Borrar" >
                         </form>
                     </div>
                 </div>
